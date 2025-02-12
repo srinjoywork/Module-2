@@ -20,6 +20,13 @@
 - **CV Upload**: Only accepts `.pdf`, `.doc`, or `.docx` files.
 - **Terms Agreement**: Must be checked before submission.
 
+  ## Live Demo
+You can check out the live version of the project here: [Live Link](https://module2capsitechsrinjoydas.netlify.app/) 
+
+## Figma Link
+Figma link of the project : [Figma link](https://www.figma.com/design/eIC90Q3MrTamoynpQZtnnQ/CT-Design-10?node-id=0-1&t=kSWyCTYOkjA6j1MR-0)
+
+
 ## Usage
 1. Fill out all required fields in the form.
 2. Ensure inputs match validation rules.
