@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="script.js" defer></script>
+
+
+</head>
+
+<body>
+  <div class="w-full">
+    <div class="max-w-7xl w-full mb-8 mx-auto">
+      <div class="max-w-7xl w-full mb-8 mx-auto px-6 py-4 bg-[#F6F8FB]">
+        <!-- Header -->
+        <header class="flex justify-between items-center pb-14">
+          <!-- Logo -->
+          <img src="/assets/img_header_logo.png" alt="Header Logo" class="h-10">
+
+          <!-- Navigation for Desktop -->
+          <nav class="hidden md:flex space-x-6">
+            <a href="/index.html" class="text-gray-700 hover:text-[#8D448B]">Home</a>
+            <div class="relative group">
+              <a href="#" class="text-gray-700 hover:text-[#8D448B] flex items-center gap-1">Advertise
+                <span>▼</span></a>
+              <ul class="absolute left-0 hidden bg-white shadow-md group-hover:block mt-2 w-40">
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 1</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 2</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 3</a></li>
+              </ul>
+            </div>
+            <div class="relative group">
+              <a href="#" class="text-gray-700 hover:text-[#8D448B] flex items-center gap-1">Support
+                <span>▼</span></a>
+              <ul class="absolute left-0 hidden bg-white shadow-md group-hover:block mt-2 w-40">
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQ</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contact Support</a></li>
+                <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Live Chat</a></li>
+              </ul>
+            </div>
+            <a href="/Contact.html" class="text-gray-700 hover:text-[#8D448B]">Contact</a>
+            <a href="#" class="text-gray-700 hover:text-[#8D448B]">About Us</a>
+          </nav>
+
+          <!-- Register Button for Desktop -->
+          <button
+            class="hidden md:block px-5 py-2 border-2 border-[#8D448B] text-[#8D448B] font-bold hover:bg-[#8D448B] hover:text-white">
+            Register Now
+          </button>
+
+          <!-- Hamburger Menu Button for Mobile -->
+          <button id="menu-toggle" class="md:hidden focus:outline-none">
+            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Menu (Hidden by default) -->
+          <div id="mobile-menu"
+            class="fixed inset-0 bg-white transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center space-y-6 pt-20 shadow-lg">
+            <button id="close-menu" class="absolute top-5 right-5">
+              <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            <a href="/index.html" class="text-gray-700 text-lg hover:text-[#8D448B]">Home</a>
+
+            <!-- Mobile Advertise Dropdown -->
+            <div class="w-full text-center">
+              <button id="advertise-toggle"
+                class="w-full text-gray-700 text-lg hover:text-[#8D448B] flex justify-center items-center gap-1">
+                Advertise <span>▼</span>
+              </button>
+              <div id="advertise-menu" class="hidden flex flex-col space-y-2 mt-2">
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 1</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 2</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Option 3</a>
+              </div>
+            </div>
+
+            <!-- Mobile Support Dropdown -->
+            <div class="w-full text-center">
+              <button id="support-toggle"
+                class="w-full text-gray-700 text-lg hover:text-[#8D448B] flex justify-center items-center gap-1">
+                Support <span>▼</span>
+              </button>
+              <div id="support-menu" class="hidden flex flex-col space-y-2 mt-2">
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">FAQ</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Contact Support</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Live Chat</a>
+              </div>
+            </div>
+
+            <a href="/Contact.html" class="text-gray-700 text-lg hover:text-[#8D448B]">Contact</a>
+            <a href="#" class="text-gray-700 text-lg hover:text-[#8D448B]">About Us</a>
+            <button
+              class="px-5 py-2 border-2 border-[#8D448B] text-[#8D448B] font-bold hover:bg-[#8D448B] hover:text-white">
+              Register Now
+            </button>
+          </div>
+        </header>
+      </div>
+
+
+      <!-- JavaScript for Mobile Menu and Dropdown Toggle -->
+      <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        const advertiseToggle = document.getElementById('advertise-toggle');
+        const advertiseMenu = document.getElementById('advertise-menu');
+
+        const supportToggle = document.getElementById('support-toggle');
+        const supportMenu = document.getElementById('support-menu');
+
+        // Open mobile menu
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.remove('translate-x-full');
+        });
+
+        // Close mobile menu
+        closeMenu.addEventListener('click', () => {
+          mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Toggle Advertise dropdown
+        advertiseToggle.addEventListener('click', () => {
+          advertiseMenu.classList.toggle('hidden');
+        });
+
+        // Toggle Support dropdown
+        supportToggle.addEventListener('click', () => {
+          supportMenu.classList.toggle('hidden');
+        });
+      </script>
+
+
+      <!-- Contact Us Page -->
+      <div class="flex flex-col items-start justify-start pb-6 mt-8 mx-4 sm:mx-8 md:mx-16 bg-white">
+
+        <h1 class="text-3xl sm:text-4xl text-gray-700 text-start mb-10 sm:mb-16 mx-4 sm:mx-8 md:mx-14">_____ Contact
+          Us
+        </h1>
+
+        <ul
+          class="mx-4 sm:mx-8 md:mx-14 flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-center px-4 sm:px-6 gap-8 sm:gap-12 md:gap-20">
+
+          <li class="flex flex-row items-center gap-2">
+            <img src="/assets/address.png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Address</h1>
+              <p class="text-sm sm:text-base">Jaipur, Rajasthan, INDIA<br>Pin 342087</p>
+            </div>
+          </li>
+
+          <li class="flex flex-row items-center gap-2">
+            <img src="/assets/call.png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Call Us</h1>
+              <p class="text-sm sm:text-base">+91 9876543210</p>
+            </div>
+          </li>
+
+          <li class="flex flex-row items-center gap-2">
+            <img src="/assets/email.png" class="w-8 sm:w-10 h-8 sm:h-10" />
+            <div class="flex flex-col">
+              <h1 class="font-semibold">Email Us</h1>
+              <p class="text-sm sm:text-base">info@test.com</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <!--Tailwind form -->
+      <div class="bg-gray-100 flex flex-col p-8  items-center justify-center min-h-fit overflow-hidden">
+
+        <h2 class="text-2xl font-bold text-center mb-6">Get in touch with us.</h2>
+        <p class="text-center text-gray-600 mb-6">We're here to assist you.</p>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-screen-md mx-auto flex-grow-0 min-h-fit">
+          <form id="userForm" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <!-- Full Name -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Full Name</label>
+                <input type="text" id="fullName"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+                <span class="text-red-500 text-sm hidden" id="fullNameError">Enter a valid name.</span>
+              </div>
+
+              <!-- Email Address -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Email Address</label>
+                <input type="email" id="email"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+                <span class="text-red-500 text-sm hidden" id="emailError">Enter a valid email.</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Phone Number</label>
+                <input type="text" id="phone"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+                <span class="text-red-500 text-sm hidden" id="phoneError">Enter a valid phone number.</span>
+              </div>
+
+              <!-- Date of Birth -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Date of Birth</label>
+                <input type="date" id="dob"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+              </div>
+
+              <!-- Gender -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Gender</label>
+                <select id="gender"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+                  <option value=""></option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <!-- Address Fields -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">City</label>
+                <input type="text" id="city"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">State</label>
+                <input type="text" id="state"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Country</label>
+                <input type="text" id="country"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Address</label>
+                <input type="text" id="address"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600" required>
+              </div>
+
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Message</label>
+                <input id="message"
+                  class="w-full border-b-2 border-gray-300 p-2 focus:outline-none focus:border-purple-600"
+                  required></textarea>
+              </div>
+            </div>
+
+            
+            <!-- Counseling and CV Upload Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+
+              <!-- Counseling Session -->
+              <div class="flex flex-col">
+                <span class="text-gray-700 font-medium">Request a Counseling session?</span>
+                <div class="flex flex-row gap-4">
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="counseling" value="yes" required>
+                    <span>Yes</span>
+                  </label>
+                  <label class="flex items-center space-x-2">
+                    <input type="radio" name="counseling" value="no" required>
+                    <span>No</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Upload CV -->
+              <div class="flex flex-col">
+                <label class="text-gray-700 font-medium">Upload your CV/Resume</label>
+                <div class="relative flex items-center border-b-2 border-gray-300 p-2">
+                  <input type="file" id="cv" accept=".pdf,.doc,.docx"
+                    class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" required>
+                  <div class="flex items-center space-x-2 cursor-pointer">
+                    <svg class="w-6 h-6" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1"
+                      viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <rect fill="none" height="50" width="50" />
+                      <path
+                        d="  M32,35c0,0,8.312,0,9.098,0C45.463,35,49,31.463,49,27.099s-3.537-7.902-7.902-7.902c-0.02,0-0.038,0.003-0.058,0.003  c0.061-0.494,0.103-0.994,0.103-1.504c0-6.71-5.439-12.15-12.15-12.15c-5.229,0-9.672,3.309-11.386,7.941  c-1.087-1.089-2.591-1.764-4.251-1.764c-3.319,0-6.009,2.69-6.009,6.008c0,0.085,0.01,0.167,0.013,0.251  C3.695,18.995,1,22.344,1,26.331C1,31.119,4.881,35,9.67,35c0.827,0,8.33,0,8.33,0"
+                        fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-miterlimit="10" stroke-width="2" />
+                      <polyline fill="none" points="20,28 25,23 30,28   " stroke="#000000" stroke-linecap="round"
+                        stroke-miterlimit="10" stroke-width="2" />
+                      <line fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
+                        x1="25" x2="25" y1="43" y2="23.333" />
+                    </svg>
+                    <span class="text-gray-600">Choose a file</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+            <!-- Terms and Conditions -->
+            <div class="flex items-center space-x-2">
+              <input type="checkbox" id="terms" required>
+              <label for="terms" class="text-gray-700">Agree to terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-1/2 bg-[#8D448B] text-white p-3 hover:bg-purple-700 font-semibold">
+              Submit Information
+            </button>
+          </form>
+
+          <script src="script.js"></script>
+        </div>
+      </div>
+
+
+
+      <!--Map-->
+      <div class="bg-white flex items-center justify-center min-h-fit p-4 mt-12 ">
+
+        <div class="w-full max-w-2xl ">
+
+          <!-- Map Image -->
+          <div class="w-full aspect-video">
+            <img src="/assets/map.png" alt="Map Location" class="w-full h-full object-cover">
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="p-6">
+            <h2 class="text-sm font-semibold text-center">Do you have any question</h2>
+            <p class="text-gray-600 text-xs text-center mt-2 mb-14">Our support team is ready to help you, please
+              contact with them</p>
+
+            <ul class="mt-4 space-y-4">
+
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '/assets/minus.png' : '/assets/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">How to contact with riders emergency ?</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered
+                    at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                  </p>
+                </div>
+              </li>
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '/assets/minus.png' : '/assets/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">App installation failed, how to update system information?</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered
+                    at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                  </p>
+                </div>
+              </li>
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '/assets/minus.png' : '/assets/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">Website response taking time, how to improve?</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered
+                    at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                  </p>
+                </div>
+              </li>
+              <li class="border-b pb-3" x-data="{ open: false }">
+                <div class="flex flex-row items-center gap-2 cursor-pointer" @click="open = !open">
+                  <!-- Toggle Icon -->
+                  <img :src="open ? '/assets/minus.png' : '/assets/plus.png'" class="w-3 h-3">
+                  <!-- Question Text -->
+                  <span class="text-black font-small">New update fixed all bug and issues</span>
+                </div>
+
+                <!-- Answer Section -->
+                <div x-show="open" class="mt-2">
+                  <p class="text-gray-500 text-sm">
+                    Get your blood tests delivered at the home collect a sample from management news. Get your blood
+                    tests delivered at the home collect a sample from management news. Get your blood tests delivered
+                    at
+                    the home collect a sample from management news. Get your blood tests delivered at the home.
+                  </p>
+                </div>
+              </li>
+
+
+
+            </ul>
+          </div>
+
+          <!-- Subscribe section -->
+          <div class="flex flex-col gap-4 justify-center items-center mb-10 ">
+            <h1 class="text-4xl text-center mt-12 font-semibold">
+              Subscribe to Our Newsletter for <br /> Design Insights
+            </h1>
+            <p class="text-center text-sm max-w-[770px]">
+              Be the first to discover trends, inspirations, and special offers as we
+              bring the world of design directly to your inbox.
+            </p>
+            <div class="flex items-center w-full max-w-lg bg-white  shadow-md overflow-hidden">
+              <img src="/assets/email1.png" class="w-3 h-3 ml-2" />
+              <input type="email" placeholder="Enter your email address"
+                class="flex-1 px-4 py-3 border-none outline-none text-gray-700">
+              </input>
+              <button class="bg-[#8D448B] hover:bg-purple-700 text-white px-6 py-3 font-medium">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </div>
+
+      <!--Other features and footer-->
+      <div class="flex flex-col min-h-screen">
+        <div class="relative bg-gray-100 flex flex-col items-center ">
+          <section class="text-center py-12">
+            <h3 class="text-[#8D448B] font-semibold">Quality Features</h3>
+            <h2 class="text-2xl font-bold text-gray-900 mt-2">Tutorials that people love most</h2>
+          </section>
+
+          <div class="container max-w-4xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 ">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="/assets/one.png" alt="Tutorial Image" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">How to work with prototype design with adobe xd featuring tools</h3>
+                <p class="text-gray-500 text-sm mt-2 flex items-center"><span class="mr-2">💬</span> 22 Comments</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="/assets/two.png" alt="Tutorial Image" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Create multiple artboard by using figma prototyping development</h3>
+                <p class="text-gray-500 text-sm mt-2 flex items-center"><span class="mr-2">💬</span> 15 Comments</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <img src="/assets/three.png" alt="Tutorial Image" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="font-semibold text-lg">Convert your web layout theming easily with sketch zeplin extension
+                </h3>
+                <p class="text-gray-500 text-sm mt-2 flex items-center"><span class="mr-2">💬</span> 18 Comments</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overlapping Middle Section -->
+          <div
+            class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 w-10/12 sm:w-11/12 md:w-3/4 lg:w-2/3 bg-[#8D448B] flex flex-row py-2 sm:py-3 px-3 sm:px-5 md:px-8 items-center rounded-lg justify-around gap-2 sm:gap-3 text-center shadow-lg">
+
+
+            <h2 class="text-sm sm:text-lg md:text-xl text-white font-bold text-start">
+              Hire the world’s best developers <br class="hidden sm:block" /> and designers around!
+            </h2>
+
+            <img src="/assets/arrow.png" class="w-16 sm:w-20 md:w-28 lg:w-32" />
+
+            <div class="flex flex-col items-center">
+              <svg width="40" height="12" class="mt-1 hidden sm:block" viewBox="0 0 73 26" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                  <rect x="2.4718" y="7.89209" width="22.0884" height="3.6814" rx="1.8407"
+                    transform="rotate(42.1773 2.4718 7.89209)" fill="white" />
+                  <rect x="53.7491" y="22.7236" width="22.0884" height="3.6814" rx="1.8407"
+                    transform="rotate(-42.18 53.7491 22.7236)" fill="white" />
+                  <rect x="39.0001" width="23" height="3" rx="1.5" transform="rotate(90 39.0001 0)" fill="white" />
+                </g>
+              </svg>
+
+              <button
+                class="mt-1 bg-white text-[#8D448B] px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg font-semibold shadow-md text-xs sm:text-sm">
+                HIRE DEVELOPERS
+              </button>
+
+              <svg width="40" height="12" class="mb-1 hidden sm:block" viewBox="0 0 74 27" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                  <rect width="22.3383" height="3.72305" rx="1.86152"
+                    transform="matrix(0.741071 -0.671427 -0.671427 -0.741071 3.0896 18.6143)" fill="white" />
+                  <rect width="22.3383" height="3.72305" rx="1.86152"
+                    transform="matrix(0.741039 0.671462 0.671462 -0.741039 54.947 3.61523)" fill="white" />
+                  <rect width="23.2602" height="3.03394" rx="1.51697" transform="matrix(0 -1 -1 0 40.0311 26.5957)"
+                    fill="white" />
+                </g>
+              </svg>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <footer
+          class="bg-white text-gray-500 text-xs md:text-sm py-10 mt-8 flex flex-col md:flex-row md:items-center md:justify-around text-center px-6 md:px-8 max-w-screen-lg mx-auto w-full gap-6 md:gap-5">
+
+          <!-- Left Section -->
+          <div class="flex flex-col md:flex-row items-center gap-2 md:gap-3">
+            <div class="flex items-center gap-2">
+              <img src="/assets/logo.png" class="w-4 md:w-5" />
+              <p class="font-semibold text-gray-900 text-sm md:text-base">StartupLanding</p>
+            </div>
+            <p class="text-[10px] md:text-xs">Copyright © 2025 Srinjoy, Inc</p>
+          </div>
+
+          <!-- Right Section (Links) -->
+          <div class="flex flex-wrap justify-center md:justify-end gap-2 md:gap-5">
+            <a href="index.html" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Advertise</a>
+            <a href="#" class="hover:underline">Support</a>
+            <a href="#" class="hover:underline">Marketing</a>
+            <a href="#" class="hover:underline">FAQ</a>
+          </div>
+
+        </footer>
+
+      </div>
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
