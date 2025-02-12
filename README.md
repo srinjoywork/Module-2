@@ -20,7 +20,7 @@
 - **CV Upload**: Only accepts `.pdf`, `.doc`, or `.docx` files.
 - **Terms Agreement**: Must be checked before submission.
 
-  ## Live Demo
+## Live Demo
 You can check out the live version of the project here: [Live Link](https://module2capsitechsrinjoydas.netlify.app/) 
 
 ## Figma Link
