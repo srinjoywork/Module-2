@@ -1,44 +1,43 @@
-![Yellow and Orange Rectangles Modern Business Retractable Exhibition Banner](https://github.com/user-attachments/assets/285681d1-1d5a-43aa-bf80-4a6ea229f5e0)
+![Yellow and Orange Rectangles Modern Business Retractable Exhibition Banner](https://github.com/user-attachments/assets/7df17622-9661-41cf-8044-306146da1777)
+# Module-2 Capsitech Training (Validated Form Using Javascript)
 
+## Features
+- **Real-time validation**: Displays error messages for invalid inputs.
+- **Prevents spam**: Ensures only valid input formats are accepted.
+- **Required fields**: All form fields must be filled out before submission.
+- **File upload validation**: CV upload is restricted to `.pdf`, `.doc`, or `.docx` formats.
+- **Terms agreement**: Users must accept terms before submission.
 
-# Module 1 - Capsitech Training
+## Validation Rules
+- **Full Name**: Must contain only letters and spaces.
+- **Email Address**: Must be a valid email format.
+- **Phone Number**: Must be exactly 10 digits.
+- **Date of Birth**: Must be selected.
+- **Gender**: Must be selected.
+- **City, State, Country, Address**: Must be filled out.
+- **Message**: Cannot be empty.
+- **Counseling Option**: Must select "Yes" or "No".
+- **CV Upload**: Only accepts `.pdf`, `.doc`, or `.docx` files.
+- **Terms Agreement**: Must be checked before submission.
 
+## Usage
+1. Fill out all required fields in the form.
+2. Ensure inputs match validation rules.
+3. Click the **Submit** button.
+4. If any input is incorrect, an error message will be displayed.
+5. If all inputs are correct, the form will be successfully submitted.
 
-## Project Overview
-This project is a responsive landing page built using modern front-end technologies. The design follows the given UI specifications and includes interactive features for better user experience.
+## Technologies Used
+- HTML
+- CSS (Tailwind CSS classes for styling)
+- JavaScript (for validation)
 
-## Tech Stack
-- **HTML** - For structuring the web pages.
-- **Tailwind CSS** - For styling and layout management.
-- **JavaScript** - For adding interactive functionalities.
+## File Structure
+- `index.html` - Main form structure
+- `script.js` - JavaScript validation logic
 
-## Features Implemented
-- **Responsive Navbar with Hamburger Menu**
-  - Implemented using JavaScript for better mobile navigation.
-  - The menu toggles when clicked on smaller screens.
-  
-- **FAQ Section with Dropdown Functionality**
-  - Each FAQ question expands/collapses when clicked.
-  - JavaScript is used to control the dropdown behavior .
-  
+## How to Run
+Simply open `index.html` in a browser. Ensure `script.js` is properly linked for validation to work.
 
-## Live Demo
-You can check out the live version of the project here: [Live Link](https://capsitech-m1-srinjoy.netlify.app/) 
-
-## Setup Instructions
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/srinjoywork/Module-1.git
-   ```
-2. Navigate to the project folder:
-   ```sh
-   cd Module-1
-   ```
-3. Open `index.html` in your browser to view the site.
-
-
-## Credits
-This project is a part of the Capsitech training program.
-
-## License
-This project is for educational purposes only.
+### Author
+This form was created with user experience and security in mind to prevent spam and ensure accurate data collection.
